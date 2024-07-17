@@ -3,7 +3,7 @@ import math
 import numpy as np
 
 class Processor():
-    def __init__(self, blue_lower, blue_upper, yellow_lower, yellow_upper):
+    def __init__(self, blue_lower, blue_upper, yellow_lower, yellow_upper, M):
         self.blue_lower = blue_lower
         self.blue_upper = blue_upper
         self.yellow_lower = yellow_lower
@@ -12,9 +12,10 @@ class Processor():
         self.angle_increment = math.pi / self.scan_degrees
         self.range_min = 1.0
         self.range_max = 50.0
-
+        self.camera_height = 3.4
+        self.M = M
         # load calibration file from BirdsEyeMatrix_college_cpt.npz
-        self.M = np.load('calibration/BirdsEyeMatrix_college_cpt.npz')['M']
+        
 
     def filter_image(self, image, lower_bound, upper_bound):
         # Convert image to HSV color space
@@ -26,9 +27,7 @@ class Processor():
 
         # Apply the HSV filter
         mask = cv2.inRange(hsv_image, lower_bound, upper_bound)
-        filtered_image = cv2.bitwise_and(image, image, mask=mask)
-
-        return filtered_image
+        return mask
     
     def maskToPoints(self, mask):
         points = []
@@ -53,24 +52,27 @@ class Processor():
             ty = math.sin(math.radians(angle))
 
             angle += add
-            for distance in range(0, self.mask.shape[1]):
-                y = self.mask.shape[0] - int(ty*distance) -1
+            for distance in range(0, mask.shape[1]):
+                y = mask.shape[0] - int(ty*distance) -1
                 x = middle + int(distance * tx)
-                if x < 0 or x >= self.mask.shape[1] or y < 0 or y >= self.mask.shape[0]:
+                
+                if x < 0 or x >= mask.shape[1] or y < 0 or y >= mask.shape[0]:
                     # if no point is found, set it to max range
                     x = middle
-                    y = self.mask.shape[0] - 1
+                    y = mask.shape[0] - 1
                     points.append((x, y))
                     break
 
-                if self.mask[y, x] == 255:                   
+                if mask[y, x] == 255:                 
                     points.append((x, y))
                     break
+
+        return np.array(points, dtype=np.float32)
         
     def warp(self, data):
-        return cv2.warpPerspective(data, self.M, (data.shape[1], data.shape[0]))[0]
+        return cv2.perspectiveTransform(np.array([data], dtype=np.float32), self.M)[0]
     
-    def pointsToAngles(self, points):
+    def pointsToRanges(self, points):
         ranges = []
         
         laser_angle = 0
@@ -81,17 +83,17 @@ class Processor():
         # determine the scale of the distance to be in meters from the calibration file
         corners = np.array([[0, 0], [0, 640], [480, 640], [480, 0]], dtype=np.float32)
         corners = self.warp(corners)
-
+        # print(corners)
         dist1 = corners[2][1] - corners[1][1]
 
         # calculate the width that the camera would see when it is 2m off the ground and with a 90 degree fov
         ground_width = 2 * math.tan(math.pi / 4) * self.camera_height
-        
-        print(ground_width)
+
+        # print(ground_width)
         scale = 480/dist1
-        print("scale1 ", scale)
+        # print("scale1 ", scale)
         scale = ground_width * scale
-        print("scale2 ", scale)
+        # print("scale2 ", scale)
 
         counter = 0
 
@@ -111,23 +113,20 @@ class Processor():
             counter += 1
 
             if laser_angle < image_angle:
-                c1 += 1
                 laser_angle -= self.angle_increment
                 ranges.append(distance)
                 continue
             
             if distance < self.range_min or distance > self.range_max:
-                c2 += 1
                 ranges.append(self.range_max)
                 laser_angle += self.angle_increment
                 continue
 
             if image_angle > laser_angle:
-                c3 += 1
                 laser_angle += self.angle_increment
                 ranges.append(self.range_max)
                 continue
 
-            c4 += 1
             ranges.append(distance)
+        return ranges
 

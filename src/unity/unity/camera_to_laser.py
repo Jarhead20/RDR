@@ -137,9 +137,6 @@ class CameraToLaserNode(Node):
         # convert to 3 colour image
         self.mask3 = cv2.cvtColor(self.mask3, cv2.COLOR_GRAY2BGR)
 
-
-        
-
         last_angle = 0
 
         counter = 0
