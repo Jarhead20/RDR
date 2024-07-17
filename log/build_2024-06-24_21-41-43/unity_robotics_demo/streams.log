@@ -1,0 +1,24 @@
+[2.505s] Invoking command in '/home/jared/ros2_ws/src/unity_robotics_demo': PYTHONPATH=/home/jared/ros2_ws/build/unity_robotics_demo/prefix_override:/home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/unity_robotics_demo build --build-base /home/jared/ros2_ws/build/unity_robotics_demo/build install --record /home/jared/ros2_ws/build/unity_robotics_demo/install.log --install-scripts $base/lib/unity_robotics_demo --single-version-externally-managed install_data
+[2.771s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.771s]   warnings.warn(
+[2.781s] running egg_info
+[2.781s] writing ../../build/unity_robotics_demo/unity_robotics_demo.egg-info/PKG-INFO
+[2.781s] writing dependency_links to ../../build/unity_robotics_demo/unity_robotics_demo.egg-info/dependency_links.txt
+[2.781s] writing entry points to ../../build/unity_robotics_demo/unity_robotics_demo.egg-info/entry_points.txt
+[2.781s] writing requirements to ../../build/unity_robotics_demo/unity_robotics_demo.egg-info/requires.txt
+[2.782s] writing top-level names to ../../build/unity_robotics_demo/unity_robotics_demo.egg-info/top_level.txt
+[2.783s] reading manifest file '../../build/unity_robotics_demo/unity_robotics_demo.egg-info/SOURCES.txt'
+[2.783s] writing manifest file '../../build/unity_robotics_demo/unity_robotics_demo.egg-info/SOURCES.txt'
+[2.784s] running build
+[2.784s] running build_py
+[2.785s] running install
+[2.785s] running install_lib
+[2.786s] running install_data
+[2.786s] running install_egg_info
+[2.787s] removing '/home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages/unity_robotics_demo-0.0.1-py3.10.egg-info' (and everything under it)
+[2.788s] Copying ../../build/unity_robotics_demo/unity_robotics_demo.egg-info to /home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages/unity_robotics_demo-0.0.1-py3.10.egg-info
+[2.789s] running install_scripts
+[2.812s] Installing color_publisher script to /home/jared/ros2_ws/install/unity_robotics_demo/lib/unity_robotics_demo
+[2.812s] Installing position_service script to /home/jared/ros2_ws/install/unity_robotics_demo/lib/unity_robotics_demo
+[2.812s] writing list of installed files to '/home/jared/ros2_ws/build/unity_robotics_demo/install.log'
+[2.847s] Invoked command in '/home/jared/ros2_ws/src/unity_robotics_demo' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/unity_robotics_demo/prefix_override:/home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/unity_robotics_demo build --build-base /home/jared/ros2_ws/build/unity_robotics_demo/build install --record /home/jared/ros2_ws/build/unity_robotics_demo/install.log --install-scripts $base/lib/unity_robotics_demo --single-version-externally-managed install_data

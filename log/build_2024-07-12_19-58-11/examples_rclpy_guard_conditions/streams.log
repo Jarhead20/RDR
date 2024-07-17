@@ -1,0 +1,33 @@
+[3.611s] Invoking command in '/home/jared/ros2_ws/build/examples_rclpy_guard_conditions': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build
+[3.852s] running develop
+[3.852s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.852s]   warnings.warn(
+[4.024s] Removing /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples-rclpy-guard-conditions.egg-link (link to .)
+[4.627s] Invoked command in '/home/jared/ros2_ws/build/examples_rclpy_guard_conditions' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build
+[4.629s] Invoking command in '/home/jared/ros2_ws/src/examples/rclpy/guard_conditions': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../../build/examples_rclpy_guard_conditions build --build-base /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build install --record /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/install.log --single-version-externally-managed install_data --force
+[4.938s] running egg_info
+[4.941s] writing ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/PKG-INFO
+[4.943s] writing dependency_links to ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/dependency_links.txt
+[4.945s] writing entry points to ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/entry_points.txt
+[4.946s] writing requirements to ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/requires.txt
+[4.946s] writing top-level names to ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/top_level.txt
+[4.949s] reading manifest file '../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/SOURCES.txt'
+[4.951s] writing manifest file '../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info/SOURCES.txt'
+[4.952s] running build
+[4.953s] running build_py
+[4.953s] running install
+[4.953s] running install_lib
+[4.953s] creating /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions
+[4.955s] copying /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build/lib/examples_rclpy_guard_conditions/__init__.py -> /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions
+[4.956s] copying /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build/lib/examples_rclpy_guard_conditions/trigger_guard_condition.py -> /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions
+[4.956s] byte-compiling /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions/__init__.py to __init__.cpython-310.pyc
+[4.959s] byte-compiling /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions/trigger_guard_condition.py to trigger_guard_condition.cpython-310.pyc
+[4.960s] running install_data
+[4.961s] copying resource/examples_rclpy_guard_conditions -> /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/share/ament_index/resource_index/packages
+[4.961s] copying package.xml -> /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/share/examples_rclpy_guard_conditions
+[4.961s] running install_egg_info
+[4.963s] Copying ../../../../build/examples_rclpy_guard_conditions/examples_rclpy_guard_conditions.egg-info to /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples_rclpy_guard_conditions-0.15.1-py3.10.egg-info
+[4.965s] running install_scripts
+[4.985s] Installing trigger_guard_condition script to /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/examples_rclpy_guard_conditions
+[4.986s] writing list of installed files to '/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/install.log'
+[5.090s] Invoked command in '/home/jared/ros2_ws/src/examples/rclpy/guard_conditions' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../../../build/examples_rclpy_guard_conditions build --build-base /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build install --record /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/install.log --single-version-externally-managed install_data --force

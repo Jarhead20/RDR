@@ -1,0 +1,19 @@
+[2.928s] Invoking command in '/home/jared/ros2_ws/build/examples_rclpy_guard_conditions': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build --no-deps symlink_data
+[3.156s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.156s]   warnings.warn(
+[3.156s] running develop
+[3.397s] running egg_info
+[3.398s] writing examples_rclpy_guard_conditions.egg-info/PKG-INFO
+[3.398s] writing dependency_links to examples_rclpy_guard_conditions.egg-info/dependency_links.txt
+[3.398s] writing entry points to examples_rclpy_guard_conditions.egg-info/entry_points.txt
+[3.398s] writing requirements to examples_rclpy_guard_conditions.egg-info/requires.txt
+[3.398s] writing top-level names to examples_rclpy_guard_conditions.egg-info/top_level.txt
+[3.400s] reading manifest file 'examples_rclpy_guard_conditions.egg-info/SOURCES.txt'
+[3.407s] writing manifest file 'examples_rclpy_guard_conditions.egg-info/SOURCES.txt'
+[3.407s] running build_ext
+[3.407s] Creating /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages/examples-rclpy-guard-conditions.egg-link (link to .)
+[3.407s] Installing trigger_guard_condition script to /home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/examples_rclpy_guard_conditions
+[3.408s] 
+[3.408s] Installed /home/jared/ros2_ws/build/examples_rclpy_guard_conditions
+[3.408s] running symlink_data
+[3.446s] Invoked command in '/home/jared/ros2_ws/build/examples_rclpy_guard_conditions' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_guard_conditions/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_guard_conditions/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_guard_conditions/build --no-deps symlink_data

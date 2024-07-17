@@ -1,0 +1,9 @@
+source;share/unity_robotics_demo/hook/pythonpath.ps1
+source;share/unity_robotics_demo/hook/pythonpath.dsv
+source;share/unity_robotics_demo/hook/pythonpath.sh
+source;share/unity_robotics_demo/hook/ament_prefix_path.ps1
+source;share/unity_robotics_demo/hook/ament_prefix_path.dsv
+source;share/unity_robotics_demo/hook/ament_prefix_path.sh
+source;../../build/unity_robotics_demo/share/unity_robotics_demo/hook/pythonpath_develop.ps1
+source;../../build/unity_robotics_demo/share/unity_robotics_demo/hook/pythonpath_develop.dsv
+source;../../build/unity_robotics_demo/share/unity_robotics_demo/hook/pythonpath_develop.sh

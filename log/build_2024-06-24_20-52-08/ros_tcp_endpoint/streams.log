@@ -1,0 +1,41 @@
+[1.439s] Invoking command in '/home/jared/ros2_ws/build/ros_tcp_endpoint': /usr/bin/cmake /home/jared/ros2_ws/src/ROS-TCP-Endpoint -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/jared/ros2_ws/install/ros_tcp_endpoint
+[1.686s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[1.686s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[1.686s]   CMake.
+[1.686s] 
+[1.686s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[1.686s]   CMake that the project does not need compatibility with older versions.
+[1.686s] 
+[1.687s] [0m
+[1.687s] -- The C compiler identification is GNU 11.4.0
+[1.688s] -- The CXX compiler identification is GNU 11.4.0
+[1.688s] -- Detecting C compiler ABI info
+[1.688s] -- Detecting C compiler ABI info - done
+[1.688s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.688s] -- Detecting C compile features
+[1.688s] -- Detecting C compile features - done
+[1.688s] -- Detecting CXX compiler ABI info
+[1.713s] -- Detecting CXX compiler ABI info - done
+[1.720s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.720s] -- Detecting CXX compile features
+[1.721s] -- Detecting CXX compile features - done
+[1.733s] [31mCMake Error at CMakeLists.txt:4 (find_package):
+[1.733s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[1.733s]   asked CMake to find a package configuration file provided by "catkin", but
+[1.733s]   CMake did not find one.
+[1.733s] 
+[1.733s]   Could not find a package configuration file provided by "catkin" with any
+[1.733s]   of the following names:
+[1.734s] 
+[1.734s]     catkinConfig.cmake
+[1.734s]     catkin-config.cmake
+[1.734s] 
+[1.734s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[1.734s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[1.734s]   provides a separate development package or SDK, be sure it has been
+[1.734s]   installed.
+[1.734s] 
+[1.734s] [0m
+[1.734s] -- Configuring incomplete, errors occurred!
+[1.734s] See also "/home/jared/ros2_ws/build/ros_tcp_endpoint/CMakeFiles/CMakeOutput.log".
+[1.738s] Invoked command in '/home/jared/ros2_ws/build/ros_tcp_endpoint' returned '1': /usr/bin/cmake /home/jared/ros2_ws/src/ROS-TCP-Endpoint -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/jared/ros2_ws/install/ros_tcp_endpoint

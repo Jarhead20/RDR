@@ -1,0 +1,21 @@
+[2.230s] Invoking command in '/home/jared/ros2_ws/build/unity': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data --force
+[2.590s] running develop
+[2.590s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.590s]   warnings.warn(
+[2.801s] running egg_info
+[2.801s] writing unity.egg-info/PKG-INFO
+[2.801s] writing dependency_links to unity.egg-info/dependency_links.txt
+[2.801s] writing entry points to unity.egg-info/entry_points.txt
+[2.802s] writing requirements to unity.egg-info/requires.txt
+[2.802s] writing top-level names to unity.egg-info/top_level.txt
+[2.804s] reading manifest file 'unity.egg-info/SOURCES.txt'
+[2.804s] writing manifest file 'unity.egg-info/SOURCES.txt'
+[2.806s] running build_ext
+[2.806s] Creating /home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity.egg-link (link to .)
+[2.807s] Installing move_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[2.808s] 
+[2.808s] Installed /home/jared/ros2_ws/build/unity
+[2.808s] running symlink_data
+[2.808s] symbolically linking /home/jared/ros2_ws/build/unity/resource/unity -> /home/jared/ros2_ws/install/unity/share/ament_index/resource_index/packages
+[2.808s] symbolically linking /home/jared/ros2_ws/build/unity/package.xml -> /home/jared/ros2_ws/install/unity/share/unity
+[2.853s] Invoked command in '/home/jared/ros2_ws/build/unity' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data --force

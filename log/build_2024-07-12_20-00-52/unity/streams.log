@@ -1,0 +1,25 @@
+[0.603s] Invoking command in '/home/jared/ros2_ws/build/unity': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data
+[0.865s] running develop
+[0.865s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.865s]   warnings.warn(
+[1.028s] running egg_info
+[1.028s] writing unity.egg-info/PKG-INFO
+[1.028s] writing dependency_links to unity.egg-info/dependency_links.txt
+[1.029s] writing entry points to unity.egg-info/entry_points.txt
+[1.029s] writing requirements to unity.egg-info/requires.txt
+[1.029s] writing top-level names to unity.egg-info/top_level.txt
+[1.032s] reading manifest file 'unity.egg-info/SOURCES.txt'
+[1.033s] writing manifest file 'unity.egg-info/SOURCES.txt'
+[1.035s] running build_ext
+[1.035s] Creating /home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity.egg-link (link to .)
+[1.036s] Installing differential_odom script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.036s] Installing drive_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.036s] Installing image_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.036s] Installing imu_odometry script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.036s] Installing mask_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.036s] Installing move_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.037s] Installing pointcloud_to_laser script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.037s] 
+[1.037s] Installed /home/jared/ros2_ws/build/unity
+[1.037s] running symlink_data
+[1.085s] Invoked command in '/home/jared/ros2_ws/build/unity' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data

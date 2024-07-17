@@ -1,0 +1,6 @@
+Invoking command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jared/ros2_ws/src/unity_robotics_demo_msgs -DCMAKE_INSTALL_PREFIX=/home/jared/ros2_ws/install/unity_robotics_demo_msgs
+Invoked command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/jared/ros2_ws/src/unity_robotics_demo_msgs -DCMAKE_INSTALL_PREFIX=/home/jared/ros2_ws/install/unity_robotics_demo_msgs
+Invoking command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/unity_robotics_demo_msgs -- -j16 -l16
+Invoked command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/unity_robotics_demo_msgs -- -j16 -l16
+Invoking command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/unity_robotics_demo_msgs
+Invoked command in '/home/jared/ros2_ws/build/unity_robotics_demo_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/unity_robotics_demo_msgs

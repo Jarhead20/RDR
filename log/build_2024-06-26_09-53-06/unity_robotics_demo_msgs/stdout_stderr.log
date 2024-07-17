@@ -1,0 +1,16 @@
+[ 10%] Built target unity_robotics_demo_msgs__rosidl_generator_c
+[ 12%] Built target unity_robotics_demo_msgs__cpp
+failed to create symbolic link '/home/jared/ros2_ws/build/unity_robotics_demo_msgs/ament_cmake_python/unity_robotics_demo_msgs/unity_robotics_demo_msgs' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_unity_robotics_demo_msgs.dir/build.make:70: CMakeFiles/ament_cmake_python_symlink_unity_robotics_demo_msgs] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:421: CMakeFiles/ament_cmake_python_symlink_unity_robotics_demo_msgs.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[35m[1mConsolidate compiler generated dependencies of target unity_robotics_demo_msgs__rosidl_typesupport_introspection_c[0m
+[35m[1mConsolidate compiler generated dependencies of target unity_robotics_demo_msgs__rosidl_typesupport_fastrtps_c[0m
+[35m[1mConsolidate compiler generated dependencies of target unity_robotics_demo_msgs__rosidl_typesupport_c[0m
+[ 23%] Built target unity_robotics_demo_msgs__rosidl_typesupport_cpp
+[ 34%] Built target unity_robotics_demo_msgs__rosidl_typesupport_c
+[ 45%] Built target unity_robotics_demo_msgs__rosidl_typesupport_introspection_c
+[ 56%] Built target unity_robotics_demo_msgs__rosidl_typesupport_fastrtps_cpp
+[ 67%] Built target unity_robotics_demo_msgs__rosidl_typesupport_introspection_cpp
+[ 78%] Built target unity_robotics_demo_msgs__rosidl_typesupport_fastrtps_c
+gmake: *** [Makefile:146: all] Error 2

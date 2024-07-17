@@ -1,0 +1,10 @@
+[console_scripts]
+camera_to_laser = unity.camera_to_laser:main
+differential_odom = unity.differential_odom:main
+drive_publisher = unity.drive_publisher:main
+image_subscriber = unity.image_subscriber:main
+imu_odometry = unity.imu_odometry:main
+mask_subscriber = unity.mask_subscriber:main
+move_publisher = unity.move_publisher:main
+pointcloud_to_laser = unity.pointcloud_to_laser:main
+

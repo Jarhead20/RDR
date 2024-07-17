@@ -1,0 +1,23 @@
+[3.307s] Invoking command in '/home/jared/ros2_ws/build/examples_rclpy_minimal_action_server': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_minimal_action_server/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_minimal_action_server/build --no-deps symlink_data
+[3.592s] running develop
+[3.593s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.593s]   warnings.warn(
+[3.742s] running egg_info
+[3.743s] writing examples_rclpy_minimal_action_server.egg-info/PKG-INFO
+[3.743s] writing dependency_links to examples_rclpy_minimal_action_server.egg-info/dependency_links.txt
+[3.743s] writing entry points to examples_rclpy_minimal_action_server.egg-info/entry_points.txt
+[3.743s] writing requirements to examples_rclpy_minimal_action_server.egg-info/requires.txt
+[3.743s] writing top-level names to examples_rclpy_minimal_action_server.egg-info/top_level.txt
+[3.746s] reading manifest file 'examples_rclpy_minimal_action_server.egg-info/SOURCES.txt'
+[3.747s] writing manifest file 'examples_rclpy_minimal_action_server.egg-info/SOURCES.txt'
+[3.749s] running build_ext
+[3.749s] Creating /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages/examples-rclpy-minimal-action-server.egg-link (link to .)
+[3.750s] Installing server script to /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/examples_rclpy_minimal_action_server
+[3.750s] Installing server_defer script to /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/examples_rclpy_minimal_action_server
+[3.750s] Installing server_not_composable script to /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/examples_rclpy_minimal_action_server
+[3.750s] Installing server_queue_goals script to /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/examples_rclpy_minimal_action_server
+[3.751s] Installing server_single_goal script to /home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/examples_rclpy_minimal_action_server
+[3.751s] 
+[3.751s] Installed /home/jared/ros2_ws/build/examples_rclpy_minimal_action_server
+[3.751s] running symlink_data
+[3.872s] Invoked command in '/home/jared/ros2_ws/build/examples_rclpy_minimal_action_server' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_minimal_action_server/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_minimal_action_server/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_minimal_action_server/build --no-deps symlink_data

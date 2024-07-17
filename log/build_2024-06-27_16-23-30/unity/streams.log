@@ -1,0 +1,22 @@
+[0.607s] Invoking command in '/home/jared/ros2_ws/build/unity': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data
+[0.869s] running develop
+[0.869s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.869s]   warnings.warn(
+[1.039s] running egg_info
+[1.039s] writing unity.egg-info/PKG-INFO
+[1.039s] writing dependency_links to unity.egg-info/dependency_links.txt
+[1.039s] writing entry points to unity.egg-info/entry_points.txt
+[1.039s] writing requirements to unity.egg-info/requires.txt
+[1.040s] writing top-level names to unity.egg-info/top_level.txt
+[1.042s] reading manifest file 'unity.egg-info/SOURCES.txt'
+[1.042s] writing manifest file 'unity.egg-info/SOURCES.txt'
+[1.044s] running build_ext
+[1.044s] Creating /home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity.egg-link (link to .)
+[1.045s] Installing drive_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.045s] Installing image_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.045s] Installing mask_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.045s] Installing move_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[1.045s] 
+[1.045s] Installed /home/jared/ros2_ws/build/unity
+[1.046s] running symlink_data
+[1.087s] Invoked command in '/home/jared/ros2_ws/build/unity' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data

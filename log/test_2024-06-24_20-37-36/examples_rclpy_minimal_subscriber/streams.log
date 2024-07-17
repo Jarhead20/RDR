@@ -1,0 +1,23 @@
+[0.240s] Invoking command in '/home/jared/ros2_ws/src/examples/rclpy/topics/minimal_subscriber': AMENT_PREFIX_PATH=/home/jared/ros2_ws/install/examples_rclpy_minimal_subscriber:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/pytest.xml --junit-prefix=examples_rclpy_minimal_subscriber -o cache_dir=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber:/home/jared/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest
+[1.128s] 
+[1.128s] [33m=============================== warnings summary ===============================[0m
+[1.128s] topics/minimal_subscriber/test/test_flake8.py::test_flake8
+[1.128s] topics/minimal_subscriber/test/test_flake8.py::test_flake8
+[1.128s]   Warning: SelectableGroups dict interface is deprecated. Use select.
+[1.128s] 
+[1.128s] -- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+[1.128s] [1m============================= test session starts ==============================[0m
+[1.128s] platform linux -- Python 3.10.12, pytest-8.2.2, pluggy-1.5.0
+[1.128s] cachedir: /home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache
+[1.128s] rootdir: /home/jared/ros2_ws/src/examples/rclpy
+[1.129s] configfile: pytest.ini
+[1.129s] plugins: ament-copyright-0.12.11, ament-xmllint-0.12.11, ament-flake8-0.12.11, launch-testing-1.0.6, ament-lint-0.12.11, launch-testing-ros-0.19.7, ament-pep257-0.12.11, rerunfailures-14.0, repeat-0.9.3, colcon-core-0.16.1, cov-5.0.0
+[1.129s] [1mcollecting ... [0m[1m
+[1.129s] collected 3 items                                                              [0m
+[1.129s] 
+[1.129s] test/test_copyright.py [32m.[0m[32m                                                 [ 33%][0m
+[1.129s] test/test_flake8.py [32m.[0m[33m                                                    [ 66%][0m
+[1.129s] test/test_pep257.py [32m.[0m[33m                                                    [100%][0m
+[1.129s] - generated xml file: /home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/pytest.xml -
+[1.129s] [33m======================== [32m3 passed[0m, [33m[1m2 warnings[0m[33m in 0.27s[0m[33m =========================[0m
+[1.132s] Invoked command in '/home/jared/ros2_ws/src/examples/rclpy/topics/minimal_subscriber' returned '0': AMENT_PREFIX_PATH=/home/jared/ros2_ws/install/examples_rclpy_minimal_subscriber:${AMENT_PREFIX_PATH} PYTEST_ADDOPTS=--tb=short --junit-xml=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/pytest.xml --junit-prefix=examples_rclpy_minimal_subscriber -o cache_dir=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber/.pytest_cache PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_minimal_subscriber:/home/jared/ros2_ws/install/examples_rclpy_minimal_subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -m pytest

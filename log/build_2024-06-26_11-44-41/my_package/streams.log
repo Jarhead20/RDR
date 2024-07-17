@@ -1,0 +1,37 @@
+[2.612s] Invoking command in '/home/jared/ros2_ws/build/my_package': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jared/ros2_ws/build/my_package/build
+[2.936s] running develop
+[2.937s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.937s]   warnings.warn(
+[3.145s] Removing /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my-package.egg-link (link to .)
+[3.175s] Invoked command in '/home/jared/ros2_ws/build/my_package' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/jared/ros2_ws/build/my_package/build
+[3.176s] Invoking command in '/home/jared/ros2_ws/src/my_package': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/jared/ros2_ws/build/my_package/build install --record /home/jared/ros2_ws/build/my_package/install.log --single-version-externally-managed install_data --force
+[3.398s] running egg_info
+[3.399s] writing ../../build/my_package/my_package.egg-info/PKG-INFO
+[3.399s] writing dependency_links to ../../build/my_package/my_package.egg-info/dependency_links.txt
+[3.399s] writing entry points to ../../build/my_package/my_package.egg-info/entry_points.txt
+[3.399s] writing requirements to ../../build/my_package/my_package.egg-info/requires.txt
+[3.399s] writing top-level names to ../../build/my_package/my_package.egg-info/top_level.txt
+[3.401s] reading manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[3.401s] adding license file 'LICENSE'
+[3.402s] writing manifest file '../../build/my_package/my_package.egg-info/SOURCES.txt'
+[3.402s] running build
+[3.402s] running build_py
+[3.402s] running install
+[3.402s] running install_lib
+[3.403s] creating /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+[3.403s] copying /home/jared/ros2_ws/build/my_package/build/lib/my_package/__init__.py -> /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+[3.403s] copying /home/jared/ros2_ws/build/my_package/build/lib/my_package/my_node_2.py -> /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+[3.403s] copying /home/jared/ros2_ws/build/my_package/build/lib/my_package/my_node.py -> /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package
+[3.404s] byte-compiling /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/__init__.py to __init__.cpython-310.pyc
+[3.404s] byte-compiling /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/my_node_2.py to my_node_2.cpython-310.pyc
+[3.404s] byte-compiling /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package/my_node.py to my_node.cpython-310.pyc
+[3.404s] running install_data
+[3.405s] copying resource/my_package -> /home/jared/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+[3.405s] copying package.xml -> /home/jared/ros2_ws/install/my_package/share/my_package
+[3.405s] running install_egg_info
+[3.406s] Copying ../../build/my_package/my_package.egg-info to /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my_package-0.0.0-py3.10.egg-info
+[3.407s] running install_scripts
+[3.425s] Installing my_node script to /home/jared/ros2_ws/install/my_package/lib/my_package
+[3.425s] Installing my_node2 script to /home/jared/ros2_ws/install/my_package/lib/my_package
+[3.426s] writing list of installed files to '/home/jared/ros2_ws/build/my_package/install.log'
+[3.456s] Invoked command in '/home/jared/ros2_ws/src/my_package' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/my_package build --build-base /home/jared/ros2_ws/build/my_package/build install --record /home/jared/ros2_ws/build/my_package/install.log --single-version-externally-managed install_data --force

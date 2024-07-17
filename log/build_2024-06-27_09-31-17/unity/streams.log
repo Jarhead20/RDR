@@ -1,0 +1,26 @@
+[0.506s] Invoking command in '/home/jared/ros2_ws/src/unity': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/unity build --build-base /home/jared/ros2_ws/build/unity/build install --record /home/jared/ros2_ws/build/unity/install.log --single-version-externally-managed install_data
+[0.717s] running egg_info
+[0.718s] writing ../../build/unity/unity.egg-info/PKG-INFO
+[0.718s] writing dependency_links to ../../build/unity/unity.egg-info/dependency_links.txt
+[0.718s] writing entry points to ../../build/unity/unity.egg-info/entry_points.txt
+[0.718s] writing requirements to ../../build/unity/unity.egg-info/requires.txt
+[0.718s] writing top-level names to ../../build/unity/unity.egg-info/top_level.txt
+[0.719s] reading manifest file '../../build/unity/unity.egg-info/SOURCES.txt'
+[0.719s] adding license file 'LICENSE'
+[0.720s] writing manifest file '../../build/unity/unity.egg-info/SOURCES.txt'
+[0.720s] running build
+[0.720s] running build_py
+[0.720s] running install
+[0.720s] running install_lib
+[0.722s] running install_data
+[0.722s] copying config/ekf.yaml -> /home/jared/ros2_ws/install/unity/share/unity/config
+[0.722s] running install_egg_info
+[0.723s] removing '/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity-0.0.0-py3.10.egg-info' (and everything under it)
+[0.723s] Copying ../../build/unity/unity.egg-info to /home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity-0.0.0-py3.10.egg-info
+[0.724s] running install_scripts
+[0.740s] Installing drive_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[0.740s] Installing image_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[0.740s] Installing mask_subscriber script to /home/jared/ros2_ws/install/unity/lib/unity
+[0.740s] Installing move_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[0.741s] writing list of installed files to '/home/jared/ros2_ws/build/unity/install.log'
+[0.755s] Invoked command in '/home/jared/ros2_ws/src/unity' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/unity build --build-base /home/jared/ros2_ws/build/unity/build install --record /home/jared/ros2_ws/build/unity/install.log --single-version-externally-managed install_data

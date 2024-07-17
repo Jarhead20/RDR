@@ -1,0 +1,18 @@
+[3.143s] Invoking command in '/home/jared/ros2_ws/build/unity': PYTHONPATH=/home/jared/ros2_ws/build/unity/prefix_override:/home/jared/ros2_ws/install/unity/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity/build --no-deps symlink_data
+[3.578s] running develop
+[3.579s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.580s]   warnings.warn(
+[3.793s] running egg_info
+[3.793s] writing unity.egg-info/PKG-INFO
+[3.793s] writing dependency_links to unity.egg-info/dependency_links.txt
+[3.793s] writing entry points to unity.egg-info/entry_points.txt
+[3.793s] writing requirements to unity.egg-info/requires.txt
+[3.794s] writing top-level names to unity.egg-info/top_level.txt
+[3.796s] reading manifest file 'unity.egg-info/SOURCES.txt'
+[3.796s] writing manifest file 'unity.egg-info/SOURCES.txt'
+[3.798s] running build_ext
+[3.798s] Creating /home/jared/ros2_ws/install/unity/lib/python3.10/site-packages/unity.egg-link (link to .)
+[3.799s] Installing move_publisher = unity.move_publisher:maindrive_publisher script to /home/jared/ros2_ws/install/unity/lib/unity
+[3.799s] 
+[3.799s] Installed /home/jared/ros2_ws/build/unity
+[3.799s] running symlink_data

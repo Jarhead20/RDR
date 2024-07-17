@@ -1,0 +1,17 @@
+[3.029s] Invoking command in '/home/jared/ros2_ws/build/launch_testing_examples': PYTHONPATH=/home/jared/ros2_ws/build/launch_testing_examples/prefix_override:/home/jared/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/launch_testing_examples/build --no-deps symlink_data
+[3.441s] running develop
+[3.446s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.446s]   warnings.warn(
+[3.690s] running egg_info
+[3.690s] writing launch_testing_examples.egg-info/PKG-INFO
+[3.691s] writing dependency_links to launch_testing_examples.egg-info/dependency_links.txt
+[3.691s] writing entry points to launch_testing_examples.egg-info/entry_points.txt
+[3.691s] writing requirements to launch_testing_examples.egg-info/requires.txt
+[3.692s] writing top-level names to launch_testing_examples.egg-info/top_level.txt
+[3.696s] reading manifest file 'launch_testing_examples.egg-info/SOURCES.txt'
+[3.698s] writing manifest file 'launch_testing_examples.egg-info/SOURCES.txt'
+[3.699s] running build_ext
+[3.702s] Creating /home/jared/ros2_ws/install/launch_testing_examples/lib/python3.10/site-packages/launch-testing-examples.egg-link (link to .)
+[3.702s] 
+[3.703s] Installed /home/jared/ros2_ws/build/launch_testing_examples
+[3.703s] running symlink_data

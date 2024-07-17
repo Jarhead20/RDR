@@ -1,0 +1,20 @@
+[3.053s] Invoking command in '/home/jared/ros2_ws/build/ros_tcp_endpoint': PYTHONPATH=/home/jared/ros2_ws/build/ros_tcp_endpoint/prefix_override:/home/jared/ros2_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/ros_tcp_endpoint/build --no-deps symlink_data
+[3.356s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.356s]   warnings.warn(
+[3.439s] running develop
+[3.439s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.439s]   warnings.warn(
+[3.699s] running egg_info
+[3.700s] writing ros_tcp_endpoint.egg-info/PKG-INFO
+[3.700s] writing dependency_links to ros_tcp_endpoint.egg-info/dependency_links.txt
+[3.700s] writing entry points to ros_tcp_endpoint.egg-info/entry_points.txt
+[3.701s] writing requirements to ros_tcp_endpoint.egg-info/requires.txt
+[3.701s] writing top-level names to ros_tcp_endpoint.egg-info/top_level.txt
+[3.705s] reading manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+[3.706s] writing manifest file 'ros_tcp_endpoint.egg-info/SOURCES.txt'
+[3.710s] running build_ext
+[3.710s] Creating /home/jared/ros2_ws/install/ros_tcp_endpoint/lib/python3.10/site-packages/ros-tcp-endpoint.egg-link (link to .)
+[3.711s] Installing default_server_endpoint script to /home/jared/ros2_ws/install/ros_tcp_endpoint/lib/ros_tcp_endpoint
+[3.712s] 
+[3.712s] Installed /home/jared/ros2_ws/build/ros_tcp_endpoint
+[3.712s] running symlink_data

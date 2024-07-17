@@ -1,0 +1,24 @@
+[3.173s] Invoking command in '/home/jared/ros2_ws/build/examples_rclpy_executors': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_executors/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_executors/build --no-deps symlink_data
+[4.011s] running develop
+[4.011s] running egg_info
+[4.011s] writing examples_rclpy_executors.egg-info/PKG-INFO
+[4.011s] writing dependency_links to examples_rclpy_executors.egg-info/dependency_links.txt
+[4.011s] writing entry points to examples_rclpy_executors.egg-info/entry_points.txt
+[4.012s] writing requirements to examples_rclpy_executors.egg-info/requires.txt
+[4.012s] writing top-level names to examples_rclpy_executors.egg-info/top_level.txt
+[4.012s] reading manifest file 'examples_rclpy_executors.egg-info/SOURCES.txt'
+[4.012s] writing manifest file 'examples_rclpy_executors.egg-info/SOURCES.txt'
+[4.012s] running build_ext
+[4.012s] Creating /home/jared/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages/examples-rclpy-executors.egg-link (link to .)
+[4.012s] Installing callback_group script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.012s] Installing composed script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.013s] Installing custom_callback_group script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.013s] Installing custom_executor script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.013s] Installing listener script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.014s] Installing talker script to /home/jared/ros2_ws/install/examples_rclpy_executors/lib/examples_rclpy_executors
+[4.014s] 
+[4.014s] Installed /home/jared/ros2_ws/build/examples_rclpy_executors
+[4.014s] running symlink_data
+[4.015s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.015s]   warnings.warn(
+[4.044s] Invoked command in '/home/jared/ros2_ws/build/examples_rclpy_executors' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/examples_rclpy_executors/prefix_override:/home/jared/ros2_ws/install/examples_rclpy_executors/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/examples_rclpy_executors/build --no-deps symlink_data

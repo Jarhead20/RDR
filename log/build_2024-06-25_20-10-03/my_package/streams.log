@@ -1,0 +1,22 @@
+[2.216s] Invoking command in '/home/jared/ros2_ws/build/my_package': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/my_package/build --no-deps symlink_data --force
+[2.613s] running develop
+[2.613s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.613s]   warnings.warn(
+[2.799s] running egg_info
+[2.800s] writing my_package.egg-info/PKG-INFO
+[2.800s] writing dependency_links to my_package.egg-info/dependency_links.txt
+[2.800s] writing entry points to my_package.egg-info/entry_points.txt
+[2.800s] writing requirements to my_package.egg-info/requires.txt
+[2.800s] writing top-level names to my_package.egg-info/top_level.txt
+[2.802s] reading manifest file 'my_package.egg-info/SOURCES.txt'
+[2.802s] writing manifest file 'my_package.egg-info/SOURCES.txt'
+[2.804s] running build_ext
+[2.804s] Creating /home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages/my-package.egg-link (link to .)
+[2.804s] Installing my_node script to /home/jared/ros2_ws/install/my_package/lib/my_package
+[2.805s] Installing my_node2 script to /home/jared/ros2_ws/install/my_package/lib/my_package
+[2.805s] 
+[2.805s] Installed /home/jared/ros2_ws/build/my_package
+[2.805s] running symlink_data
+[2.805s] symbolically linking /home/jared/ros2_ws/build/my_package/resource/my_package -> /home/jared/ros2_ws/install/my_package/share/ament_index/resource_index/packages
+[2.805s] symbolically linking /home/jared/ros2_ws/build/my_package/package.xml -> /home/jared/ros2_ws/install/my_package/share/my_package
+[2.834s] Invoked command in '/home/jared/ros2_ws/build/my_package' returned '0': PYTHONPATH=/home/jared/ros2_ws/build/my_package/prefix_override:/home/jared/ros2_ws/install/my_package/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/my_package/build --no-deps symlink_data --force

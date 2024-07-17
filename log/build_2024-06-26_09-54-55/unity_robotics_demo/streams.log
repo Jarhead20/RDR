@@ -1,0 +1,21 @@
+[3.182s] Invoking command in '/home/jared/ros2_ws/build/unity_robotics_demo': PYTHONPATH=/home/jared/ros2_ws/build/unity_robotics_demo/prefix_override:/home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/jared/ros2_ws/build/unity_robotics_demo/build --no-deps symlink_data
+[3.485s] /usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[3.485s]   warnings.warn(
+[3.562s] running develop
+[3.562s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.562s]   warnings.warn(
+[3.766s] running egg_info
+[3.767s] writing unity_robotics_demo.egg-info/PKG-INFO
+[3.767s] writing dependency_links to unity_robotics_demo.egg-info/dependency_links.txt
+[3.767s] writing entry points to unity_robotics_demo.egg-info/entry_points.txt
+[3.768s] writing requirements to unity_robotics_demo.egg-info/requires.txt
+[3.768s] writing top-level names to unity_robotics_demo.egg-info/top_level.txt
+[3.770s] reading manifest file 'unity_robotics_demo.egg-info/SOURCES.txt'
+[3.771s] writing manifest file 'unity_robotics_demo.egg-info/SOURCES.txt'
+[3.773s] running build_ext
+[3.773s] Creating /home/jared/ros2_ws/install/unity_robotics_demo/lib/python3.10/site-packages/unity-robotics-demo.egg-link (link to .)
+[3.774s] Installing color_publisher script to /home/jared/ros2_ws/install/unity_robotics_demo/lib/unity_robotics_demo
+[3.774s] Installing position_service script to /home/jared/ros2_ws/install/unity_robotics_demo/lib/unity_robotics_demo
+[3.774s] 
+[3.774s] Installed /home/jared/ros2_ws/build/unity_robotics_demo
+[3.774s] running symlink_data
