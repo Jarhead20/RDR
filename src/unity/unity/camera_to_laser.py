@@ -61,9 +61,6 @@ class CameraToLaserNode(Node):
         
         points = []
 
-        # print(self.mask.shape)
-
-        
         middle = int(self.mask.shape[1] / 2)
 
         self.mask2 = cv2.cvtColor(self.mask, cv2.COLOR_GRAY2BGR)
@@ -181,13 +178,6 @@ class CameraToLaserNode(Node):
         # determine the scale of the distance to be in meters from the calibration file
         corners = np.array([[0, 0], [0, 640], [480, 640], [480, 0]], dtype=np.float32)
         corners = cv2.perspectiveTransform(np.array([corners], dtype=np.float32), matrix)
-        # visualise the corners on a new image
-        # self.vis = np.zeros((480, 640, 3), dtype=np.uint8)
-        # for corner in corners[0]:
-        #     cv2.circle(self.vis, (int(corner[0]), int(corner[1])), 3, (0, 0, 255), -1)
-        #     print(corner)
-        #     cv2.imshow('vis', self.vis)
-        #     cv2.waitKey(0)
 
         dist1 = corners[0][2][1] - corners[0][1][1]
 

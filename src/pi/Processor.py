@@ -1,5 +1,6 @@
 import cv2
 import math
+import numpy as np
 
 class Processor():
     def __init__(self, blue_lower, blue_upper, yellow_lower, yellow_upper):
@@ -8,7 +9,12 @@ class Processor():
         self.yellow_lower = yellow_lower
         self.yellow_upper = yellow_upper
         self.scan_degrees = 180
+        self.angle_increment = math.pi / self.scan_degrees
+        self.range_min = 1.0
+        self.range_max = 50.0
 
+        # load calibration file from BirdsEyeMatrix_college_cpt.npz
+        self.M = np.load('calibration/BirdsEyeMatrix_college_cpt.npz')['M']
 
     def filter_image(self, image, lower_bound, upper_bound):
         # Convert image to HSV color space
@@ -61,4 +67,67 @@ class Processor():
                     points.append((x, y))
                     break
         
+    def warp(self, data):
+        return cv2.warpPerspective(data, self.M, (data.shape[1], data.shape[0]))[0]
+    
+    def pointsToAngles(self, points):
+        ranges = []
         
+        laser_angle = 0
+
+        midpoint = points[0]
+        points = points[1:]
+
+        # determine the scale of the distance to be in meters from the calibration file
+        corners = np.array([[0, 0], [0, 640], [480, 640], [480, 0]], dtype=np.float32)
+        corners = self.warp(corners)
+
+        dist1 = corners[2][1] - corners[1][1]
+
+        # calculate the width that the camera would see when it is 2m off the ground and with a 90 degree fov
+        ground_width = 2 * math.tan(math.pi / 4) * self.camera_height
+        
+        print(ground_width)
+        scale = 480/dist1
+        print("scale1 ", scale)
+        scale = ground_width * scale
+        print("scale2 ", scale)
+
+        counter = 0
+
+        while(laser_angle < math.pi and counter < len(points)):
+            x = points[counter][1]
+            y = points[counter][0]
+
+            # calculate the distance from the midpoint
+            distance = math.sqrt((x - midpoint[1])**2 + (y - midpoint[0])**2)
+
+            # scale distance
+            distance = distance / scale
+
+            # calculate the angle
+            image_angle = math.atan2(y - midpoint[0], x - midpoint[1])
+
+            counter += 1
+
+            if laser_angle < image_angle:
+                c1 += 1
+                laser_angle -= self.angle_increment
+                ranges.append(distance)
+                continue
+            
+            if distance < self.range_min or distance > self.range_max:
+                c2 += 1
+                ranges.append(self.range_max)
+                laser_angle += self.angle_increment
+                continue
+
+            if image_angle > laser_angle:
+                c3 += 1
+                laser_angle += self.angle_increment
+                ranges.append(self.range_max)
+                continue
+
+            c4 += 1
+            ranges.append(distance)
+
