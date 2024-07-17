@@ -4,4 +4,6 @@
 	branch = main-ros2
 [submodule "src/unity/unity/global_racetrajectory_optimization"]
 	path = src/unity/unity/global_racetrajectory_optimization
-	url = https://github.com/TUMFTM/global_racetrajectory_optimization.git
+	url = https://github.com/Jarhead20/global_racetrajectory_optimization.git
+[submodule "global_racetrajectory_optimization/"]
+	url = https://github.com/Jarhead20/global_racetrajectory_optimization
