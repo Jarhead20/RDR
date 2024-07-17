@@ -18,7 +18,7 @@ class Main:
 
         self.proc = Processor(self.blue_lower, self.blue_upper, self.yellow_lower, self.yellow_upper, self.M)
         # create serial object
-        self.serial = serial.Serial('/dev/ttyS0', 115200)
+        self.serial = serial.Serial('/dev/serial/by-path/pci-0000:02:00.0-usb-0:6:2.0', 115200, timeout=1)
 
         # if master file exists, set true 
         self.controller = os.path.exists('/home/jared/ros2_ws/src/pi/CONTROLLER')
@@ -26,6 +26,10 @@ class Main:
     def run(self):
         # get image from video
         cap = cv2.VideoCapture("/home/jared/ros2_ws/src/pi/2024-07-01 16-36-50.mp4")
+        print(1)
+        self.serial.write(b'hello\n')
+        print(2)
+        self.serial.close()
 
         while True:
             ret, frame = cap.read()
@@ -63,7 +67,7 @@ class Main:
             # ranges_int = [int(x) for x in ranges]  # Convert floats to integers
             # ranges_str = ','.join(map(str, ranges_int))  # Convert list of integers to a comma-separated string
             # ranges_bytes = ranges_str.encode()  # Encode the string to bytes
-            self.serial.write(b'hello')  # Write the bytes to the serial port
+            # self.serial.write(b'hello\n')  # Write the bytes to the serial port
             
 
 

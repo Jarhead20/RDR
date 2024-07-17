@@ -2,3 +2,6 @@
 	path = src/ROS-TCP-Endpoint
 	url = https://github.com/Unity-Technologies/ROS-TCP-Endpoint.git
 	branch = main-ros2
+[submodule "src/unity/unity/global_racetrajectory_optimization"]
+	path = src/unity/unity/global_racetrajectory_optimization
+	url = https://github.com/TUMFTM/global_racetrajectory_optimization.git
