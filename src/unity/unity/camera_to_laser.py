@@ -79,7 +79,6 @@ class CameraToLaserNode(Node):
         increament = 180/self.scan_degrees
 
         j = 0
-        print(increament)
 
         # sweep the image from left to right with the midpoint at the bottom middle of the image
         # for x in range(0, 180, increament):
@@ -111,7 +110,7 @@ class CameraToLaserNode(Node):
                 cv2.line(self.mask2, (middle, self.mask.shape[0]-1), (x, y), (255, 0, 0), 1)
                 if self.mask[y, x] == 255:
                     # visualise on mask2
-                    # cv2.circle(self.mask2, (x,y), 3, (0, 0, 255), -1)
+                    cv2.circle(self.mask2, (x,y), 3, (0, 0, 255), -1)
                     # # draw a line from the middle to the point
                     # cv2.imshow('mask5', self.mask2)
                     # cv2.waitKey(0)
@@ -120,10 +119,12 @@ class CameraToLaserNode(Node):
         
 
         # # show midpoint
-        # cv2.circle(self.mask2, (middle, self.mask.shape[0]-1), 1, (0, 255, 0), -1)
+        cv2.circle(self.mask2, (middle, self.mask.shape[0]-1), 1, (0, 255, 0), -1)
         
-        # cv2.imshow('mask5', self.mask2)
-        # cv2.waitKey(0)
+
+
+
+        
 
         # show mask
 
@@ -132,9 +133,10 @@ class CameraToLaserNode(Node):
         mtx = npzfile['Camera_matrix']
 
         # print(points)
+        points = np.array([points], dtype=np.float32)
 
         # undistort the points
-        points = cv2.undistortPoints(np.array([points], dtype=np.float32), mtx, None)
+        # points = cv2.undistortPoints(points, mtx, None)
 
         # print(points)
         
@@ -142,38 +144,34 @@ class CameraToLaserNode(Node):
         npzfile = np.load('calibration/BirdsEyeMatrix_college_cpt.npz')
         matrix = npzfile['M']
         # print(matrix)
+        print(points.shape)
 
         # apply perspective transform to the points
         points = cv2.perspectiveTransform(points, matrix)
         # print(points)
 
+        # cv2.imshow('mask5', self.mask2)
+        # cv2.waitKey(0)
+
         # copy the mask to mask3
         self.mask3 = np.copy(self.mask)
 
         # convert to 3 colour image
-        self.mask3 = cv2.cvtColor(self.mask3, cv2.COLOR_GRAY2BGR)
+        # self.mask3 = cv2.cvtColor(self.mask3, cv2.COLOR_GRAY2BGR)
+        self.mask3 = np.zeros((self.mask.shape[0]*2, self.mask.shape[1]*2, 3), dtype=np.uint8)
 
         last_angle = 0
 
         counter = 0
 
-        p = points[0]
+        # print(points)
+
+        p = points.squeeze()
 
         midpoint = p[0]
 
         # remove the 1st point
         p = p[1:]
-
-        # print(p.shape)
-
-        # visualise points
-        # for point in p:
-        #     dist = math.sqrt((point[0] - midpoint[0])**2 + (point[1] - midpoint[1])**2)
-        #     if dist < laser_scan_msg.range_min or dist > laser_scan_msg.range_max:
-        #         continue
-            
-
-        
 
         # a = int(math.pi / laser_scan_msg.angle_increment)
 
@@ -196,13 +194,26 @@ class CameraToLaserNode(Node):
 
         # calculate the width that the camera would see when it is 2m off the ground and with a 90 degree fov
         ground_width = 2 * math.tan(math.pi / 4) * self.camera_height
-        print(ground_width)
-
 
         scale = 480/dist1
-        print("scale ", scale)
+        # print("scale ", scale)
         scale = ground_width * scale
         print("scale ", scale)
+
+
+        for point in p:
+            dist = math.sqrt((point[0] - midpoint[0])**2 + (point[1] - midpoint[1])**2)
+            # if dist < laser_scan_msg.range_min or dist > laser_scan_msg.range_max:
+            #     continue
+            point = point / scale
+            point[1] += self.mask.shape[1]
+            point[0] += self.mask.shape[0]
+            # point[1] *= -1
+            print(point, midpoint, dist)
+            cv2.circle(self.mask3, (int(point[0]), self.mask.shape[0]-int(point[1])), 3, (0, 0, 255), -1)
+            cv2.line(self.mask3, (int(midpoint[0]), self.mask.shape[0]-int(midpoint[1])), (int(point[0]), self.mask.shape[0]-int(point[1])), (255, 0, 0), 1)
+        # cv2.imshow('mask3', self.mask3)
+        # cv2.waitKey(0)
 
         # self.get_logger().info(f'p = {p.shape}')
 
@@ -221,7 +232,7 @@ class CameraToLaserNode(Node):
 
             counter += 1
 
-            # print(laser_angle, image_angle, distance, counter, x, y)
+            print(laser_angle, image_angle, distance, counter, x, y)
 
             
 
@@ -262,7 +273,8 @@ class CameraToLaserNode(Node):
         # Set the ranges
         laser_scan_msg.ranges = ranges
         # print(ranges)
-        # print(len(ranges))
+        # print("len" + len(ranges))
+        print("len" + str(len(ranges)))
 
         # Publish the laser scan message
         self.publisher.publish(laser_scan_msg)
