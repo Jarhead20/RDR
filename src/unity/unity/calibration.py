@@ -45,8 +45,8 @@ for fname in images:
         # Draw and display the corners
         img = cv2.drawChessboardCorners(img, CHECKERBOARD, corners2, ret)
      
-    cv2.imshow('img',img)
-    cv2.waitKey(0)
+    # cv2.imshow('img',img)
+    # cv2.waitKey(0)
  
 cv2.destroyAllWindows()
  
@@ -69,7 +69,7 @@ np.savez(
 )
 
 # generate the src and destination points for birds eye warp from image995.png
-img = cv2.imread('./calibration/image343.png')
+img = cv2.imread('./calibration/1721989141.983419.png')
 
 # undistort the image based on previous calibration
 img = cv2.undistort(img, mtx, dist, None)
@@ -84,8 +84,11 @@ print(corners2)
 output_width = 640
 output_height = 480
 
+ow2 = output_width/8
+oh2 = output_height/8
+
 src = np.float32([corners2[0], corners2[CHECKERBOARD[0]-1], corners2[-1], corners2[-CHECKERBOARD[0]]])
-dst = np.float32([[output_width/8, output_height*(3/8)], [output_width*(2/8), output_height*(3/8)], [output_width*(2/8), output_height*(5/8)], [output_width/8, output_height*(5/8)]])
+dst = np.float32([[ow2*2, oh2*5], [ow2, oh2*5], [ow2, oh2*3], [ow2*2, oh2*3]])
 # draw the points on the original image
 for point in src:
     cv2.circle(img, (int(point[0][0]), int(point[0][1])), 5, (0, 0, 255), 1)
@@ -93,6 +96,8 @@ cv2.imshow('img', img)
 cv2.waitKey(0)
 print("gp")
 print(src)
+print("sef")
+print(dst)
 # print(dst)
 M = cv2.getPerspectiveTransform(src, dst)
 # warp the image

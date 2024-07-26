@@ -18,6 +18,8 @@ class RacelineGenerator(Node):
     def map_callback(self, msg):
         main_globaltraj.main()
         
+        
+        
 
 def main(args=None):
     rclpy.init(args=args)

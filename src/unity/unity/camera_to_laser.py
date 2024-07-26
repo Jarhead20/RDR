@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import LaserScan
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import CompressedImage
 import math
 import numpy as np
 import cv2
@@ -23,7 +23,7 @@ class CameraToLaserNode(Node):
         self.camera_height = self.get_parameter('camera_height').value
 
         self.subscription = self.create_subscription(
-            Image,
+            CompressedImage,
             'mask',
             self.binary_mask_callback,
             10
@@ -33,14 +33,19 @@ class CameraToLaserNode(Node):
     def binary_mask_callback(self, msg):
         # convert to image
         # self.mask = np.array(msg.data, dtype=np.uint8).reshape((msg.height, msg.width))
-
         # get the rgb image and convert to grayscale
-        self.mask = np.array(msg.data, dtype=np.uint8).reshape((msg.height, msg.width, 3))
+        self.mask = np.frombuffer(msg.data, np.uint8)
+        self.mask = cv2.imdecode(self.mask, cv2.IMREAD_COLOR)
         self.mask = cv2.cvtColor(self.mask, cv2.COLOR_BGR2GRAY)
+
+        
+        # print(self.mask)
 
         # threshold the image
         _, self.mask = cv2.threshold(self.mask, 127, 255, cv2.THRESH_BINARY)
-
+        # cv2.imshow('mask', self.mask)
+        # cv2.waitKey(1)
+        # return
         self.scan_degrees = 36
 
         # show mask
@@ -121,6 +126,17 @@ class CameraToLaserNode(Node):
         # cv2.waitKey(0)
 
         # show mask
+
+        # load the distortion matrix
+        npzfile = np.load('calibration/CalibrationMatrix_college_cpt.npz')
+        mtx = npzfile['Camera_matrix']
+
+        # print(points)
+
+        # undistort the points
+        points = cv2.undistortPoints(np.array([points], dtype=np.float32), mtx, None)
+
+        # print(points)
         
         # load calibration file from calibration/BirdsEyeMatrix_college_cpt.npz
         npzfile = np.load('calibration/BirdsEyeMatrix_college_cpt.npz')
@@ -128,7 +144,7 @@ class CameraToLaserNode(Node):
         # print(matrix)
 
         # apply perspective transform to the points
-        points = cv2.perspectiveTransform(np.array([points], dtype=np.float32), matrix)
+        points = cv2.perspectiveTransform(points, matrix)
         # print(points)
 
         # copy the mask to mask3
