@@ -16,8 +16,10 @@ resource/unity
 unity/__init__.py
 unity/calibration.py
 unity/camera_to_laser.py
+unity/camera_to_points.py
 unity/differential_odom.py
 unity/drive_publisher.py
+unity/generate_raceline.py
 unity/hsv_filter.py
 unity/image_subscriber.py
 unity/imu_odometry.py
@@ -25,6 +27,7 @@ unity/mask_subscriber.py
 unity/move_publisher.py
 unity/path_generator.py
 unity/pointcloud_to_laser.py
+unity/raceline_test.py
 unity.egg-info/PKG-INFO
 unity.egg-info/SOURCES.txt
 unity.egg-info/dependency_links.txt

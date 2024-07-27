@@ -159,12 +159,12 @@ class DiffOdomNode(Node):
         # Position covariance
         odom.pose.covariance[0] = 0.5 # x
         odom.pose.covariance[7] = 0.5 # y
-        odom.pose.covariance[35] = 0.5 # yaw 
+        odom.pose.covariance[35] = 0.001 # yaw 
 
         # Twist covariance
         odom.twist.covariance[0] = 0.5 # x
         odom.twist.covariance[7] = 0.5 # y
-        odom.twist.covariance[35] = 0.5 # yaw
+        odom.twist.covariance[35] = 0.001 # yaw
 
         # Velocity
         odom.child_frame_id = 'base_link'

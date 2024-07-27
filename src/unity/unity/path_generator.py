@@ -32,6 +32,8 @@ class TrackPathPlanner(Node):
         self.map_origin = [msg.info.origin.position.x, msg.info.origin.position.y]
         self.map = self.occupancy_grid_to_image(msg)
         self.path = self.generate_path()
+        self.publish_path()
+        
 
     def occupancy_grid_to_image(self, occupancy_grid):
         width = occupancy_grid.info.width
@@ -51,21 +53,21 @@ class TrackPathPlanner(Node):
         self.map[self.map < 250] = 0
 
         # visualize the map
-        cv2.imshow('Map', self.map)
-        cv2.waitKey(0)
+        # cv2.imshow('Map', self.map)
+        # cv2.waitKey(0)
 
         # Morphological operations to remove noise
         kernel = np.ones((3, 3), np.uint8)
         self.map = cv2.morphologyEx(self.map, cv2.MORPH_OPEN, kernel)
 
-        cv2.imshow('Map', self.map)
-        cv2.waitKey(0)
+        # cv2.imshow('Map', self.map)
+        # cv2.waitKey(0)
         
         # Skeletonize the map
         self.map = cv2.ximgproc.thinning(self.map)
 
-        cv2.imshow('Map', self.map)
-        cv2.waitKey(0)
+        # cv2.imshow('Map', self.map)
+        # cv2.waitKey(0)
 
         contours, _ = cv2.findContours(self.map, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
@@ -107,13 +109,13 @@ class TrackPathPlanner(Node):
 
         # Visualize path
         for point in path_points:
-            cv2.circle(self.map, point, 5, (0, 0, 255), -1)
+            cv2.circle(self.map, point, 2, (0, 0, 255), -1)
 
         # Increase map size for visualization
-        self.map = cv2.resize(self.map, (0, 0), fx=10, fy=10)
+        self.map = cv2.resize(self.map, (0, 0), fx=5, fy=5)
 
-        cv2.imshow('Path', self.map)
-        cv2.waitKey(0)
+        # cv2.imshow('Path', self.map)
+        # cv2.waitKey(0)
 
         return path
 

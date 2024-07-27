@@ -1,0 +1,4 @@
+Invoking command in '/home/jared/ros2_ws/build/slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/slam -- -j16 -l16
+Invoked command in '/home/jared/ros2_ws/build/slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/slam -- -j16 -l16
+Invoking command in '/home/jared/ros2_ws/build/slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/slam
+Invoked command in '/home/jared/ros2_ws/build/slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/slam

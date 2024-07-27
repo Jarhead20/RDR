@@ -33,12 +33,12 @@ def generate_launch_description():
             name='diff_odom_node',
             output='screen',
         ),
-        Node(
-            package='unity',
-            executable='image_subscriber',
-            name='image_subscriber',
-            output='screen',
-        ),
+        # Node(
+        #     package='unity',
+        #     executable='image_subscriber',
+        #     name='image_subscriber',
+        #     output='screen',
+        # ),
         
         # Node(
         #     package='rviz2',

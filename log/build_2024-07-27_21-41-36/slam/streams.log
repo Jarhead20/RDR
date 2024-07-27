@@ -1,0 +1,62 @@
+[0.008s] Invoking command in '/home/jared/ros2_ws/build/slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/slam -- -j16 -l16
+[0.030s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.114s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.134s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.136s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.140s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.147s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.158s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.197s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.198s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.217s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.329s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.444s] -- Found nav_msgs: 4.2.4 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.557s] -- Found AMD headers in: /usr/include/suitesparse
+[0.557s] -- Found AMD library: /usr/lib/x86_64-linux-gnu/libamd.so
+[0.557s] -- Found CAMD headers in: /usr/include/suitesparse
+[0.557s] -- Found CAMD library: /usr/lib/x86_64-linux-gnu/libcamd.so
+[0.557s] -- Found CCOLAMD headers in: /usr/include/suitesparse
+[0.557s] -- Found CCOLAMD library: /usr/lib/x86_64-linux-gnu/libccolamd.so
+[0.557s] -- Found CHOLMOD headers in: /usr/include/suitesparse
+[0.558s] -- Found CHOLMOD library: /usr/lib/x86_64-linux-gnu/libcholmod.so
+[0.558s] -- Found COLAMD headers in: /usr/include/suitesparse
+[0.558s] -- Found COLAMD library: /usr/lib/x86_64-linux-gnu/libcolamd.so
+[0.558s] -- Found SPQR headers in: /usr/include/suitesparse
+[0.558s] -- Found SPQR library: /usr/lib/x86_64-linux-gnu/libspqr.so
+[0.558s] -- Found Config headers in: /usr/include/suitesparse
+[0.558s] -- Found Config library: /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so
+[0.558s] -- Found Intel Thread Building Blocks (TBB) library (2021.5 / ) include location: . Assuming SuiteSparseQR was compiled with TBB.
+[0.558s] -- Adding librt to SuiteSparse_config libraries (required on Linux & Unix [not OSX] if SuiteSparse is compiled with timing).
+[0.560s] -- Could NOT find METIS (missing: METIS_INCLUDE_DIR METIS_LIBRARY) 
+[0.562s] -- Found required Ceres dependency: Eigen version 3.4.0 in /usr/share/eigen3/cmake
+[0.563s] -- Found required Ceres dependency: glog
+[0.564s] -- Found required Ceres dependency: gflags
+[0.564s] -- Found Ceres version: 2.2.0 installed in: /usr/local with components: [EigenSparse, SparseLinearAlgebraLibrary, LAPACK, SuiteSparse, SchurSpecializations]
+[0.611s] -- Configuring done
+[0.622s] -- Generating done
+[0.624s] -- Build files have been written to: /home/jared/ros2_ws/build/slam
+[0.648s] [35m[1mConsolidate compiler generated dependencies of target slam[0m
+[0.671s] [ 50%] [32mBuilding CXX object CMakeFiles/slam.dir/src/slam.cpp.o[0m
+[8.912s] [100%] [32m[1mLinking CXX executable slam[0m
+[9.278s] [100%] Built target slam
+[9.287s] Invoked command in '/home/jared/ros2_ws/build/slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/jared/ros2_ws/build/slam -- -j16 -l16
+[9.320s] Invoking command in '/home/jared/ros2_ws/build/slam': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/slam
+[9.327s] -- Install configuration: ""
+[9.327s] -- Installing: /home/jared/ros2_ws/install/slam/lib/slam/slam
+[9.335s] -- Set runtime path of "/home/jared/ros2_ws/install/slam/lib/slam/slam" to ""
+[9.335s] -- Installing: /home/jared/ros2_ws/install/slam/share/ament_index/resource_index/package_run_dependencies/slam
+[9.335s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/ament_index/resource_index/parent_prefix_path/slam
+[9.335s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/environment/ament_prefix_path.sh
+[9.336s] -- Installing: /home/jared/ros2_ws/install/slam/share/slam/environment/ament_prefix_path.dsv
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/environment/path.sh
+[9.336s] -- Installing: /home/jared/ros2_ws/install/slam/share/slam/environment/path.dsv
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/local_setup.bash
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/local_setup.sh
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/local_setup.zsh
+[9.336s] -- Installing: /home/jared/ros2_ws/install/slam/share/slam/local_setup.dsv
+[9.336s] -- Installing: /home/jared/ros2_ws/install/slam/share/slam/package.dsv
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/ament_index/resource_index/packages/slam
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/cmake/slamConfig.cmake
+[9.336s] -- Up-to-date: /home/jared/ros2_ws/install/slam/share/slam/cmake/slamConfig-version.cmake
+[9.337s] -- Installing: /home/jared/ros2_ws/install/slam/share/slam/package.xml
+[9.339s] Invoked command in '/home/jared/ros2_ws/build/slam' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/jared/ros2_ws/build/slam
