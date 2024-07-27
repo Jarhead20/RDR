@@ -72,7 +72,7 @@ np.savez(
 img = cv2.imread('./calibration/1721989141.983419.png')
 
 # undistort the image based on previous calibration
-img = cv2.undistort(img, mtx, dist, None)
+# img = cv2.undistort(img, mtx, dist, None)
 
 # detect checkerboard corners
 gray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
