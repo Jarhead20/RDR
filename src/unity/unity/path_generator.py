@@ -56,6 +56,10 @@ class TrackPathPlanner(Node):
         # cv2.imshow('Map', self.map)
         # cv2.waitKey(0)
 
+        # expand the white area to make sure the track is closed
+        kernel = np.ones((5, 5), np.uint8)
+        self.map = cv2.dilate(self.map, kernel)
+
         # Morphological operations to remove noise
         kernel = np.ones((3, 3), np.uint8)
         self.map = cv2.morphologyEx(self.map, cv2.MORPH_OPEN, kernel)
@@ -112,7 +116,7 @@ class TrackPathPlanner(Node):
             cv2.circle(self.map, point, 2, (0, 0, 255), -1)
 
         # Increase map size for visualization
-        self.map = cv2.resize(self.map, (0, 0), fx=5, fy=5)
+        self.map = cv2.resize(self.map, (0, 0), fx=3, fy=3)
 
         # cv2.imshow('Path', self.map)
         # cv2.waitKey(0)
