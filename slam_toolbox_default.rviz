@@ -8,7 +8,6 @@ Panels:
         - /Status1
         - /LaserScan1
         - /TF1
-        - /TF1/Status1
         - /LaserScan2
         - /Path1
       Splitter Ratio: 0.5
@@ -228,7 +227,7 @@ Visualization Manager:
     - Alpha: 1
       Buffer Length: 1
       Class: rviz_default_plugins/Path
-      Color: 25; 255; 0
+      Color: 255; 25; 0
       Enabled: true
       Head Diameter: 0.30000001192092896
       Head Length: 0.20000000298023224
@@ -256,7 +255,7 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: base_link
+    Fixed Frame: map
     Frame Rate: 30
   Name: root
   Tools:
@@ -299,25 +298,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 25.137771606445312
+      Distance: 149.60055541992188
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 1.689972162246704
-        Y: -3.23947811126709
-        Z: 0.007349206134676933
+        X: 40.84999465942383
+        Y: 9.486824035644531
+        Z: 8.26445484161377
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.6753982305526733
+      Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.210373878479004
+      Yaw: 3.0454154014587402
     Saved: ~
 Window Geometry:
   Displays:
