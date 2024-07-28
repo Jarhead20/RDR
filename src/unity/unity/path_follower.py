@@ -108,15 +108,22 @@ class PathFollowerNode(Node):
         # Create a new image
         self.map2 = np.zeros((480, 800, 3), dtype=np.uint8) * 255
         # Show the points on the path and the current position, set 240, 320 as the origin
+        color = (0, 0, 255)
+        inc = 255/len(self.path)
         for point in self.path:
+            # change the color from red to green gradually
+            color = (color[0], color[1] + inc, color[2] - inc)
             # Scale the points to fit the image
             point = point * 5
-            cv2.circle(self.map2, (int(point[0] + 320), int(point[1] + 240)), 2, (0, 0, 255), -1)
+            cv2.circle(self.map2, (int(point[0] + 320), int(point[1] + 240)), 2, color, -1)
             
         cv2.circle(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), 5, (255, 0, 0), -1)
         # Show current steering vector
         target_point = self.path[self.pure_pursuit.current_index]
         cv2.line(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), (int(target_point[0] * 5 + 320), int(target_point[1] * 5 + 240)), (0, 255, 0), 2)
+
+        # show current heading
+        cv2.line(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), (int(self.position[0] * 5 + 320 + 20 * np.cos(self.theta)), int(self.position[1] * 5 + 240 + 20 * np.sin(self.theta)), (0, 0, 255), 2))
         cv2.imshow('Path', self.map2)
         cv2.waitKey(1)
 
@@ -132,22 +139,37 @@ class PurePursuit:
         closest_point_index = np.argmin(distances)
         return closest_point_index
 
-    def get_target_point(self, position, invert_direction):
+    def get_target_point(self, position, heading, invert_direction):
         # while True:
             # Calculate distance from the current position to the next waypoint
             # distance = np.linalg.norm(self.path[self.current_index] - position)
             # if distance >= self.look_ahead_distance or self.current_index == len(self.path) - 1:
             #     break
             # self.current_index += 1
+        
+
+
         closest_index = self.find_closest_point(position)
-        if invert_direction:
-            self.current_index = closest_index - 1
-        else:
-            self.current_index = closest_index + 1
+        closest_distance = np.inf
+        # check that there are sufficient points ahead
+        if closest_index + 5 >= len(self.path):
+            return self.path[-1]
+        for i in range(-5,5):
+            # calculate the distance and the angle to the point
+            distance = np.linalg.norm(self.path[closest_index + i] - position)
+            angle = np.arctan2(self.path[closest_index + i][1] - position[1], self.path[closest_index + i][0] - position[0])
+
+            # check if the point is within pi/2 radians of the heading
+            if abs(angle - heading) < np.pi/2 and distance < closest_distance:
+                closest_distance = distance
+                closest_index = closest_index + i
+
+        
+        self.current_index = closest_index
         return self.path[self.current_index]
 
     def control(self, position, heading, invert_direction):
-        target_point = self.get_target_point(position, invert_direction)
+        target_point = self.get_target_point(position, heading, invert_direction)
         angle_to_target = np.arctan2(target_point[1] - position[1], target_point[0] - position[0])
         steering_angle = angle_to_target - heading
 
