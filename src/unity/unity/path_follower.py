@@ -123,7 +123,7 @@ class PathFollowerNode(Node):
         cv2.line(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), (int(target_point[0] * 5 + 320), int(target_point[1] * 5 + 240)), (0, 255, 0), 2)
 
         # show current heading
-        cv2.line(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), (int(self.position[0] * 5 + 320 + 20 * np.cos(self.theta)), int(self.position[1] * 5 + 240 + 20 * np.sin(self.theta)), (0, 0, 255), 2))
+        cv2.line(self.map2, (int(self.position[0] * 5 + 320), int(self.position[1] * 5 + 240)), (int(self.position[0] * 5 + 320 + 20 * np.cos(self.theta)), int(self.position[1] * 5 + 240 + 20 * np.sin(self.theta))), (0, 0, 255), 2)
         cv2.imshow('Path', self.map2)
         cv2.waitKey(1)
 

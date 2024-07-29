@@ -10,6 +10,7 @@ Panels:
         - /TF1
         - /LaserScan2
         - /Path1
+        - /Path1/Status1
       Splitter Ratio: 0.5
     Tree Height: 382
   - Class: rviz_common/Selection
@@ -298,25 +299,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 149.60055541992188
+      Distance: 176.36441040039062
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 40.84999465942383
-        Y: 9.486824035644531
-        Z: 8.26445484161377
+        X: 45.88966751098633
+        Y: 9.777132034301758
+        Z: 8.3451566696167
       Focal Shape Fixed Size: false
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.5697963237762451
+      Pitch: 1.5547963380813599
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.0454154014587402
+      Yaw: 3.1304163932800293
     Saved: ~
 Window Geometry:
   Displays:

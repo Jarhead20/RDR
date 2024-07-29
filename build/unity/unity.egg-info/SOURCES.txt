@@ -25,6 +25,7 @@ unity/image_subscriber.py
 unity/imu_odometry.py
 unity/mask_subscriber.py
 unity/move_publisher.py
+unity/path_follower.py
 unity/path_generator.py
 unity/pointcloud_to_laser.py
 unity/raceline_test.py

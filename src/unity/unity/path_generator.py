@@ -7,6 +7,8 @@ import cv2
 import os
 import tf2_ros
 import tf_transformations
+from slam_toolbox.srv import SerializePoseGraph
+import time
 
 class TrackPathPlanner(Node):
     def __init__(self):
@@ -25,6 +27,9 @@ class TrackPathPlanner(Node):
             self.map_callback,
             10
         )
+
+        # map serializer service
+        self.serializer = self.create_client(SerializePoseGraph, '/slam_toolbox/serialize_map')
 
         
         self.tf_buffer = tf2_ros.Buffer()
@@ -121,6 +126,13 @@ class TrackPathPlanner(Node):
         # Visualize contour
         cv2.drawContours(self.map, [track_contour], -1, (0, 255, 0), 2)
 
+        # check the that the map is continuous and makes a loop
+        if not cv2.isContourConvex(track_contour):
+            self.get_logger().error("The track is not convex.")
+            return None
+        
+
+
         # Generate points along the contour
         epsilon = 0.001 * cv2.arcLength(track_contour, True)
         approx = cv2.approxPolyDP(track_contour, epsilon, True)
@@ -145,6 +157,7 @@ class TrackPathPlanner(Node):
             # path.poses.append(pose)
             poses.append(pose)
 
+
         
         # reorder the points to start from the closest point to the current position, maintaining the order of the points
         if position is not None:
@@ -167,7 +180,30 @@ class TrackPathPlanner(Node):
         # cv2.imshow('Map', self.map)
         # cv2.waitKey(1) & 0XFF
 
+        
+
         return path
+    
+    def serialize_map(self):
+        # change the mode of the slam node to be localization only
+        while not self.serializer.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Service not available, waiting again...')
+        
+        request = SerializePoseGraph.Request()
+        # name the map with the current time
+        request.filename = time.strftime("%Y%m%d-%H%M%S")
+        future = self.serializer.call_async(request)
+        rclpy.spin_until_future_complete(self, future)
+        if future.result() is not None:
+            self.get_logger().info('Service call success')
+            self.get_logger().info(f"Saved map to {future.result().filename}")
+            return future.result().filename
+        else:
+            self.get_logger().error('Service call failed')
+            return None
+        
+        
+
 
     def publish_path(self):
         if self.path:
